@@ -4,13 +4,15 @@ services:
   server:
     build: ./server
     ports:
-      - "3000:3000"
+      - "8700:8700"
+    environment:
+      - PORT=8700
     restart: always
 
   client:
     build: ./client
     ports:
-      - "8080:80"
+      - "3700:80"
     depends_on:
       - server
     restart: always
