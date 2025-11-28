@@ -1,0 +1,106 @@
+.app-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--ht-dark-blue);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+.sidebar-overlay h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ht-blue);
+}
+
+.stats-panel {
+    font-size: 0.9rem;
+    color: var(--ht-grey);
+}
+
+:root {
+    --ht-blue: #005596;
+    --ht-yellow: #fbbf24;
+    --ht-red: #dc2626;
+    --ht-green: #059669;
+    --ht-amber: #d97706;
+    --ht-grey: #6b7280;
+    --ht-light-grey: #f3f4f6;
+    --ht-white: #ffffff;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--ht-light-grey);
+    color: #1f2937;
+}
+
+button {
+    font-family: var(--font-sans);
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: var(--ht-blue);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Custom Leaflet Popup Styles */
+.leaflet-popup-content-wrapper {
+    background: white;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-tip {
+    background: white;
+}
+
+.popup-content h3 {
+    margin: 0 0 5px 0;
+    color: var(--ht-blue);
+    border-bottom: 2px solid var(--ht-yellow);
+    padding-bottom: 2px;
+}
+
+.popup-content p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+    color: #444;
+}

@@ -1,0 +1,96 @@
+.departures-board {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 350px;
+    max-height: 80vh;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #333;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.board-header {
+    padding: 15px;
+    border-bottom: 4px solid var(--ht-yellow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--ht-blue);
+    color: white;
+}
+
+.board-header h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 280px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.close-btn:hover {
+    opacity: 1;
+}
+
+.board-content {
+    padding: 0;
+    overflow-y: auto;
+}
+
+.departures-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.departures-table th {
+    text-align: left;
+    padding: 12px;
+    background-color: #f8f9fa;
+    color: var(--ht-grey);
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+}
+
+.departures-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.departures-table tr:last-child td {
+    border-bottom: none;
+}
+
+.route-id {
+    font-weight: 700;
+    color: var(--ht-blue);
+    width: 50px;
+    font-size: 1.1rem;
+}
+
+.time {
+    text-align: right;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}

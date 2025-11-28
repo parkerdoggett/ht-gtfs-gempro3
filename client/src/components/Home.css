@@ -1,0 +1,140 @@
+.home-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--ht-blue) 0%, var(--ht-dark-blue) 100%);
+    color: white;
+}
+
+.home-content {
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+.brand-logo h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.brand-logo p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.alerts-section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: left;
+    overflow: hidden;
+}
+
+.alerts-header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.alerts-header:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.alerts-header h3 {
+    margin: 0;
+    color: #d32f2f;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.arrow.open {
+    transform: rotate(180deg);
+}
+
+.alerts-list {
+    padding: 0 15px 15px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.alert-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+.alert-item:last-child {
+    border-bottom: none;
+}
+
+.alert-item strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.alert-item p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s, background 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.menu-item.primary {
+    background: var(--ht-yellow);
+    color: var(--ht-dark-blue);
+    border: none;
+}
+
+.menu-item.primary:hover {
+    background: #ffe066;
+}
+
+.menu-item .icon {
+    font-size: 2.5rem;
+}
+
+.menu-item .label {
+    font-weight: 600;
+    font-size: 1.1rem;
+}

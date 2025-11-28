@@ -1,0 +1,114 @@
+.stop-routes-board {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 350px;
+    max-height: 80vh;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #333;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.board-header {
+    padding: 15px;
+    border-bottom: 4px solid var(--ht-yellow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--ht-blue);
+    color: white;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.board-header h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 220px;
+}
+
+.fav-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.fav-btn:hover {
+    transform: scale(1.2);
+}
+
+.fav-btn.active {
+    color: var(--ht-yellow);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.close-btn:hover {
+    opacity: 1;
+}
+
+.board-content {
+    padding: 0;
+    overflow-y: auto;
+}
+
+.routes-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.route-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    gap: 15px;
+}
+
+.route-item:last-child {
+    border-bottom: none;
+}
+
+.route-badge {
+    background: var(--ht-blue);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    min-width: 45px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.route-name {
+    font-weight: 500;
+    color: #333;
+}
